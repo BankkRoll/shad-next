@@ -1,0 +1,40 @@
+{
+  "title": "shad-next Documentation",
+  "companyName": "shad-next",
+  "fontFamily": "Inter, sans-serif",
+  "footerText": "© 2024 shad-next",
+  "routes": [
+    {
+      "slug": "",
+      "title": "Documentation",
+      "description": "Welcome to the documentation page of My Company.",
+      "icon": "FileIcon"
+    },
+    {
+      "slug": "introduction",
+      "title": "Introduction",
+      "description": "Introduction to the documentation of My Company.",
+      "icon": "BookIcon"
+    },
+    {
+      "slug": "",
+      "title": "Installation",
+      "description": "How to install My Company products.",
+      "icon": "SettingsIcon",
+      "children": [
+        {
+          "slug": "installation",
+          "title": "Installation",
+          "description": "Quick start guide for My Company products.",
+          "icon": "SettingsIcon"
+        },
+        {
+          "slug": "installation/quick-start",
+          "title": "Quick Start",
+          "description": "Quick start guide for My Company products.",
+          "icon": "RocketIcon"
+        }
+      ]
+    }
+  ]
+}
