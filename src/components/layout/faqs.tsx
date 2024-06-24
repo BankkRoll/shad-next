@@ -6,11 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 import ReactDOMServer from "react-dom/server";
 
 const faqs = [
