@@ -19,6 +19,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
@@ -95,13 +96,13 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex items-center">
+    <header className="relative shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
+      <Link href="/" className="z-10 font-bold text-lg flex items-center">
         <CirclePowerIcon className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
         shad-next
       </Link>
       {/* <!-- Mobile --> */}
-      <div className="flex items-center lg:hidden">
+      <div className="z-10 flex items-center lg:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Menu
@@ -169,7 +170,7 @@ export const Navbar = () => {
       </div>
 
       {/* <!-- Desktop --> */}
-      <NavigationMenu className="hidden lg:block mx-auto">
+      <NavigationMenu className="z-10 hidden lg:block mx-auto">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">
@@ -219,8 +220,10 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
-                  {label}
+                <Link href={href} passHref>
+                  <Button variant="linkHover2" className="text-base">
+                    {label}
+                  </Button>
                 </Link>
               </NavigationMenuLink>
             ))}
@@ -228,7 +231,7 @@ export const Navbar = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="hidden lg:flex gap-2">
+      <div className="z-10 hidden lg:flex gap-2">
         <Link target="_blank" href={"https://github.com/BankkRoll/shad-next"}>
           <Button variant="ringHoverOutline">
             <div className="flex items-center">
@@ -247,6 +250,7 @@ export const Navbar = () => {
 
         <ModeToggle />
       </div>
+      <BorderBeam size={100} duration={10} />
     </header>
   );
 };

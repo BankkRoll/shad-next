@@ -20,7 +20,7 @@ import { useTheme } from "next-themes";
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
   const [currentTheme, setCurrentTheme] = React.useState<string | undefined>(
-    undefined
+    undefined,
   );
 
   React.useEffect(() => {
