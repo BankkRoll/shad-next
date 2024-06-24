@@ -1,4 +1,4 @@
-# shad-next Documentation Template
+# shad-next Starter
 
 Welcome to the `shad-next` documentation template. This template provides a flexible and easy-to-use structure for building documentation with Next.js and MDX.
 
@@ -11,7 +11,7 @@ To get started with the `shad-next` template, follow the installation and setup 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/shad-next.git
+   git clone https://github.com/BankkRoll/shad-next.git
    cd shad-next
    ```
 
